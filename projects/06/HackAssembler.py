@@ -52,7 +52,7 @@ while cmd != 0:
             else:
                 #if it is not a number, add it to the table. It is intended as a variable
                 bin_ = '{0:015b}'.format(parser1.getCurRAM())
-                table.addEntryVariable(parser1.symbol(cmd),bin_)
+                table.addEntry(parser1.symbol(cmd),bin_)
                 address = table.getAddress(parser1.symbol(cmd))
                 output.write(address)
 

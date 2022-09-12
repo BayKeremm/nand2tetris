@@ -15,8 +15,8 @@ class Parser(object):
         return self.address
 
     def getCurRAM(self):
-        self.curRAM = self.curRAM + 1
         ret = self.curRAM
+        self.curRAM = self.curRAM + 1
         return ret
 
     def advance(self):
@@ -175,9 +175,6 @@ class SymbolTable:
             "KBD":"110000000000000"
         }
     def addEntry(self,symbol,address):
-        self.Table[symbol]=address
-        return True
-    def addEntryVariable(self,symbol,address):
         self.Table[symbol]=address
         return True
     def contains(self,symbol):
